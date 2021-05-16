@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540px" height="800px" viewBox="0 0 540 800" version="1.1">
+    <defs>
+        <script type="text/javascript">
+            var svgns = "http://www.w3.org/2000/svg";
+
+            function forceTextWrappingOn(node, width, gap) {
+                var chars = node.firstChild.nodeValue.split(' '),
+                    x = parseInt(node.getAttribute('x'), 10),
+                    y = parseInt(node.getAttribute('y'), 10),
+                    index = 0,
+                    tspan, tspanWidth, textNode
+
+                    node.removeChild(node.firstChild);
+                y = y - gap;
+                for (var c in chars) {
+                    if (chars.hasOwnProperty(c)) {
+                        tspanWidth = tspan == null ? 0 : tspan.getComputedTextLength();
+                        if (tspanWidth > width || tspanWidth === 0) {
+                            y = y + gap;
+                            tspan = document.createElementNS(svgns, 'tspan');
+                            tspan.setAttribute('x', x);
+                            tspan.setAttribute('y', y);
+                            node.appendChild(tspan);
+                            index = 0;
+                        }
+                        
+                        textNode = document.createTextNode(index === 0 ? chars[c] : " " + chars[c]);
+                        tspan.appendChild(textNode);
+                        index++;
+                    }
+                }
+            }
+        </script>
+        <style>@import url(fontawesome/css/all.css);</style>
+        <style>@import url(fonts/fonts.css);</style>
+        <style>@import url(fonts/material-design-iconic-font.min.css);</style>
+        <style>@import url(fonts/all.css);</style>           
+        <clipPath id="cardbox">
+            <rect x="20px" y="20px" height="760px" width="500px" rx="20px" ry="20px"/>
+        </clipPath>
+        <clipPath id="artclip">
+            <rect x="55px" y="155px" height="110px" width="110px" rx="55px" ry="55px"/>
+        </clipPath>        
+        <filter id="dropshadow2" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>     
+        <filter id="dropshadow" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.8"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>            
+        <style>
+            .artclip {
+                -webkit-clip-path: url(#artclip);
+                clip-path: url(#artclip);
+            }        
+            .cardboxclip {
+                -webkit-clip-path: url(#cardbox);
+                clip-path: url(#cardbox);
+            }
+            .cardblackstroke {
+                stroke:#000000;
+            }              
+            .cardgreystroke {
+                stroke:#57595d;
+            }              
+            .cardwhitestroke {
+                stroke:#ffffff;
+            }            
+            .cardbluestroke {
+                stroke:#1B8DC4;
+            }
+            .cardgreenstroke {
+                stroke:#2AB566;
+            }
+            .cardpurplestroke {
+                stroke:#8F469B;
+            }            
+            .cardpinkstroke {
+                stroke:#E82B4B;
+            }            
+            .cardyellowstroke {
+                stroke:#F3BC1C;
+            }  
+            .lab1colorstroke {
+                stroke:#626E61;
+            }             
+            .lab2colorstroke {
+                stroke:#7B3141;
+            }             
+            .lab3colorstroke {
+                stroke:#0F0326;
+            }                
+            .lab1color {
+                fill:#626E61;
+            }             
+            .lab2color {
+                fill:#7B3141;
+            }             
+            .lab3color {
+                fill:#0F0326;
+            }             
+            .cardblack {
+                fill:#000000;
+            }     
+            .cardred {
+                fill:#5A1807;
+            }                       
+            .cardgrey {
+                fill:#57595d;
+            }              
+            .cardwhite {
+                fill:#ffffff;
+            }            
+            .cardblue {
+                fill:#1B8DC4;
+            }
+            .cardgreen {
+                fill:#2AB566;
+            }
+            .cardpurple {
+                fill:#8F469B;
+            }            
+            .cardpink {
+                fill:#E82B4B;
+            }            
+            .cardyellow {
+                fill:#F3BC1C;
+            }       
+            .cardbrown {
+                fill:#7a5c61;
+            }  
+            .cardcoal {
+                fill: #373F51;
+            }
+            .logotext {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:40px;
+            }            
+            .logotext2 {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:30px;
+            }  
+            .dropshadow {
+                filter: url(#dropshadow);
+            }  
+            .dropshadow2 {
+                filter: url(#dropshadow2);
+            }                            
+            .resourcetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:110px;
+            }    
+            .smallresourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:35px;
+            }               
+            .powertext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:60px;
+            }              
+            .cardtype {
+                fill:#000000;
+                font-family:'Material-Design-Iconic-Font';
+                font-weight: bold;
+                font-size:120px;
+            } 
+            .projectype {
+                font-family:'Varela Round';
+                font-size:17px;
+            }             
+            .cardname {
+                font-family:'Varela Round';
+                font-size:22px;
+                font-weight: bold;
+            }  
+            .effecttext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                
+                font-size:20px;
+            }               
+            .cardteaser {
+                font-family:'Varela Round';
+                font-size:15px;
+            }              
+            .cardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:80px;
+            }     
+            .cardcosttext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:42px;
+            }               
+            .cardresourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:30px;
+            }     
+           .hazardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:70px;
+            }            
+           .resourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:90px;
+            }      
+            .resourcetypetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:100px;
+            }                           
+            .cardtextbold {
+                fill:#000000;
+                font-weight: bold;
+            } 
+            .pricetext {
+                font-family:'Varela Round';
+                font-size:120px;
+                font-weight: bold;
+            }                      
+            .rotateside {
+                transform: rotate(90deg);
+                transform-origin: 50% 50%;
+            }              
+        </style>
+    </defs>
+    <rect width="540px" height="800px" x="0px" y="0px" style="stroke:#f0f0f0;fill:#ffffff;" />
+    <g class="cardboxclip">
+
+        <rect width="470px" height="140px" x="35px" y="140px" rx="15px" ry="15px" class="cardpinkstroke" fill-opacity="0" stroke-width="10px" />
+        <rect width="50px" height="50px" x="455px" y="135px" rx="15px" ry="15px" class="cardpink"/>
+        <text id="projectype" x="175px" y="175px" class="projectype cardblack" text-anchor="start">TESTING CENTER</text>
+        <text id="cardname" x="175px" y="195px" class="cardname cardblack" text-anchor="start">Viral Test</text>
+        <image x="45px" y="150px" width="130px" height="130px" class="artclip" xlink:href="./cities/Cordillera Administrative Region.png"/>
+        <text id="cardteaser" x="175px" y="215px" class="cardteaser cardblack" text-anchor="start">A viral test tells you if you have a current infection. Two types of viral tests can be used: nucleic acid amplification tests (NAATs) and antigen tests.</text>
+
+        <!-- <rect width="500px" height="760px" x="20px" y="20px" rx="20px" ry="20px" style="stroke:#BAD80A;fill:#ffffff;" fill-opacity="0" stroke-width="10px" /> -->
+        <!-- <rect width="500px" height="540px" x="20px" y="130px" style="stroke:#BAD80A;fill:#ffffff;" fill-opacity="0" stroke-width="5px" />
+        <rect width="500px" height="140px" x="20px" y="130px" style="stroke:#BAD80A;fill:#ffffff;" fill-opacity="0" stroke-width="5px" /> -->
+
+        <rect width="470px" height="200px" x="35px" y="300px" rx="20px" ry="20px" class="lab3colorstroke" fill-opacity="0" stroke-width="10px" />
+        <text id="cardcosttext" x="270px" y="360px" class="cardcosttext cardblack" text-anchor="middle" letter-spacing="5"><tspan class="cardgreen">&#xf0d6;&#xf0d6;</tspan><tspan class="cardpink">&#xf2c1;</tspan><tspan class="cardblue">&#xf0c3;</tspan></text>
+        <text id="cardtext" x="270px" y="462px" class="cardtext lab3color" text-anchor="middle" letter-spacing="5">&#xf7f2;</text>
+        <rect width="470px" height="140px" x="35px" y="520px" rx="15px" ry="15px" class="cardyellowstroke" fill-opacity="0" stroke-width="10px" />
+        <rect width="50px" height="50px" x="35px" y="610px" rx="15px" ry="15px" class="cardyellow"/>
+        <text id="effecttext" x="270px" y="560px" class="cardblack effecttext" text-anchor="middle" letter-spacing="5">&#xf807;: Look at top card of the draw deck, you may put that card at the bottom of the deck.</text>
+
+
+        <text id="actiontextleft" x="40px" y="112px" class="resourcetext cardpink" text-anchor="start">&#xf2c1;</text>
+        <text id="actiontextleft" x="480px" y="174px" class="smallresourcetext cardwhite" text-anchor="middle">&#xf2c1;</text>
+        <text id="actiontextright" x="500px" y="758px" class="resourcetext cardyellow" text-anchor="end">&#xf51e;</text>       
+        <text id="actiontextright" x="60px" y="650px" class="smallresourcetext cardwhite" text-anchor="middle">&#xf51e;</text>       
+        <text id="infectedicon" x="500px" y="112px" class="hazardtext cardred" text-anchor="end">&#xe074;</text>
+
+
+        <script>
+            forceTextWrappingOn(document.getElementById('cardteaser'),210,15);
+            forceTextWrappingOn(document.getElementById('effecttext'),210,20);
+        </script>
+    </g>
+</svg>

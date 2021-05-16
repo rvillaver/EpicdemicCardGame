@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540px" height="800px" viewBox="0 0 540 800" version="1.1">
+    <defs>
+        <script type="text/javascript">
+            var svgns = "http://www.w3.org/2000/svg";
+
+            function forceTextWrappingOn(node, width, gap) {
+                var chars = node.firstChild.nodeValue.split(' '),
+                    x = parseInt(node.getAttribute('x'), 10),
+                    y = parseInt(node.getAttribute('y'), 10),
+                    index = 0,
+                    tspan, tspanWidth, textNode
+
+                    node.removeChild(node.firstChild);
+                y = y - gap;
+                for (var c in chars) {
+                    if (chars.hasOwnProperty(c)) {
+                        tspanWidth = tspan == null ? 0 : tspan.getComputedTextLength();
+                        if (tspanWidth > width || tspanWidth === 0) {
+                            y = y + gap;
+                            tspan = document.createElementNS(svgns, 'tspan');
+                            tspan.setAttribute('x', x);
+                            tspan.setAttribute('y', y);
+                            node.appendChild(tspan);
+                            index = 0;
+                        }
+                        
+                        textNode = document.createTextNode(index === 0 ? chars[c] : " " + chars[c]);
+                        tspan.appendChild(textNode);
+                        index++;
+                    }
+                }
+            }
+        </script>
+        <style>@import url(fontawesome/css/all.css);</style>
+        <style>@import url(fonts/fonts.css);</style>
+        <style>@import url(fonts/material-design-iconic-font.min.css);</style>
+        <style>@import url(fonts/all.css);</style>           
+        <clipPath id="cardbox">
+            <rect x="20px" y="20px" height="760px" width="500px" rx="20px" ry="20px"/>
+        </clipPath>
+        <clipPath id="artclip">
+            <rect x="55px" y="155px" height="110px" width="110px" rx="55px" ry="55px"/>
+        </clipPath>        
+        <filter id="dropshadow2" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>     
+        <filter id="dropshadow" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.8"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>            
+        <style>
+            .artclip {
+                -webkit-clip-path: url(#artclip);
+                clip-path: url(#artclip);
+            }        
+            .cardboxclip {
+                -webkit-clip-path: url(#cardbox);
+                clip-path: url(#cardbox);
+            }
+            .cardblackstroke {
+                stroke:#000000;
+            }              
+            .cardgreystroke {
+                stroke:#57595d;
+            }              
+            .cardwhitestroke {
+                stroke:#ffffff;
+            }            
+            .cardbluestroke {
+                stroke:#1B8DC4;
+            }
+            .cardgreenstroke {
+                stroke:#2AB566;
+            }
+            .cardpurplestroke {
+                stroke:#8F469B;
+            }            
+            .cardpinkstroke {
+                stroke:#E82B4B;
+            }            
+            .cardyellowstroke {
+                stroke:#F3BC1C;
+            }   
+            .cardred {
+                fill:#5A1807;
+            }               
+            .cardblack {
+                fill:#000000;
+            }              
+            .cardgrey {
+                fill:#57595d;
+            }              
+            .cardwhite {
+                fill:#ffffff;
+            }            
+            .cardblue {
+                fill:#1B8DC4;
+            }
+            .cardgreen {
+                fill:#2AB566;
+            }
+            .cardpurple {
+                fill:#8F469B;
+            }            
+            .cardpink {
+                fill:#E82B4B;
+            }            
+            .cardyellow {
+                fill:#F3BC1C;
+            }  
+            .cardbrown {
+                fill:#7a5c61;
+            }  
+            .cardcoal {
+                fill: #373F51;
+            }
+            .lab1colorstroke {
+                stroke:#6AB547;
+            }             
+            .lab2colorstroke {
+                stroke:#00B2CA;
+            }             
+            .lab3colorstroke {
+                stroke:#982649;
+            }                
+            .lab1color {
+                fill:#6AB547;
+            }             
+            .lab2color {
+                fill:#00B2CA;
+            }             
+            .lab3color {
+                fill:#982649;
+            }              
+            .logotext {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:40px;
+            }            
+            .logotext2 {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:30px;
+            }  
+            .dropshadow {
+                filter: url(#dropshadow);
+            }  
+            .dropshadow2 {
+                filter: url(#dropshadow2);
+            }                            
+            .resourcetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:110px;
+            }    
+            .powertext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:60px;
+            }              
+            .cardtype {
+                fill:#000000;
+                font-family:'Material-Design-Iconic-Font';
+                font-weight: bold;
+                font-size:120px;
+            } 
+            .projectype {
+                font-family:'Varela Round';
+                font-size:17px;
+            }             
+            .cardname {
+                font-family:'Varela Round';
+                font-size:22px;
+                font-weight: bold;
+            }  
+            .actionname {
+                font-family:'Varela Round';
+                font-size:30px;
+                font-weight: bold;
+            }              
+            .effecttext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                 
+                font-size:15px;
+            }  
+            .effecthelptext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                 
+                font-size:12px;
+            }                                      
+            .cardteaser {
+                font-family:'Varela Round';
+                font-size:18px;
+            }              
+            .cardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:80px;
+            }     
+            .cardcosttext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:32px;
+            }               
+            .actiontext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                
+                font-size:26px;
+            }               
+            .cardresourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:30px;
+            }     
+           .hazardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:70px;
+            }            
+           .resourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:90px;
+            }      
+            .resourcetypetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:100px;
+            }                           
+            .cardtextbold {
+                fill:#000000;
+                font-weight: bold;
+            } 
+            .pricetext {
+                font-family:'Varela Round';
+                font-size:120px;
+                font-weight: bold;
+            }                      
+            .rotateside {
+                transform: rotate(90deg);
+                transform-origin: 50% 50%;
+            }              
+        </style>
+    </defs>
+    <rect width="540px" height="800px" x="0px" y="0px" style="stroke:#f0f0f0;fill:#ffffff;" />
+    <g class="cardboxclip">
+
+        <rect width="470px" height="140px" x="35px" y="140px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text id="projectype" x="60px" y="160px" class="projectype cardblack" text-anchor="start">Covid-19</text>
+        <text id="cardname" x="60px" y="180px" class="cardname cardblack" text-anchor="start">Epidemic: The Card Game</text>
+        <text id="cardteaser" x="60px" y="198px" class="cardteaser cardblack" text-anchor="start">A cooperative game using multi-use cards. All players win if there are no infected in all cities and each city has a building facility, and all types of buildings were built. All players lose if they need to add a card and all the cities are full.</text>
+
+
+        <rect width="470px" height="370px" x="35px" y="300px" rx="20px" ry="20px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text  x="50px" y="320px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">Discard a matching icon, to choose any</text>
+        <text id="cardcosttext" x="70px" y="345px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardpink">&#xf2c1;</tspan> : Recruit &#xf146;&#xf061;&#xf015;</text>
+        <text id="cardcosttext" x="70px" y="375px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardblue">&#xf0c3;</tspan> : Test &#xf146;&#xf061;&#xf256;</text>
+        <text id="cardcosttext" x="70px" y="405px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardpurple">&#xf0f1;</tspan> : Cure &#xf0d6;&#xf0fe;&#xf061;&#xf1f8;&#xf0f1;</text>
+        <text id="cardcosttext" x="470px" y="435px" class="actiontext cardblack" text-anchor="end" letter-spacing="5">Fund &#xf256;&#xf061;&#xf015; : <tspan class="cardyellow">&#xf51e;</tspan></text>
+        <text id="cardcosttext" x="470px" y="465px" class="actiontext cardblack" text-anchor="end" letter-spacing="5">Quarantine &#xf0fe;&#xf061;&#xf7f2; : <tspan class="cardbrown">&#xf023;</tspan></text>
+        <text id="cardcosttext" x="470px" y="495px" class="actiontext cardblack" text-anchor="end" letter-spacing="5">Build/Operate &#xf256;&#xf015;&#xf061;&#xf7f2;: <tspan class="cardcoal">&#xf807;</tspan></text>
+        
+        <rect width="460px" height="141px" x="40px" y="520px" rx="15px" ry="15px" style="stroke:#f0f0f0;fill:#ffffff;" />
+        <text  x="50px" y="515px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">1. Active Player Actions (soc, gov)</text>
+        <text  x="50px" y="535px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">3. Add cards to your city for every &#xe074;</text>
+        <text  x="82px" y="550px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">icon in the city minimum of 1</text>
+        <text  x="50px" y="565px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">When mutation is drawn, deal another</text>
+        <text  x="50px" y="580px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">card to that city if it has space for it</text>
+        <text  x="50px" y="595px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">Resolve any mutations present in the city</text>
+        <text  x="50px" y="610px" class="cardred effecthelptext" text-anchor="start" letter-spacing="5">&#xe074;&#xe074; | &#xf155;&#xe074; | &#xf82a;&#xe074;</text>
+        <text  x="50px" y="625px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">At the start of your turn if your city is</text>
+        <text  x="50px" y="640px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">less than 5, discard card &#xf0fe; from your &#xf7f2;</text>
+        <text  x="50px" y="655px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">Max 4 &#xf2c1; social | Max 4 &#xf2c1; government</text>
+
+
+        <text id="actiontextleft" x="40px" y="122px" class="actionname cardblack" text-anchor="start">Social Frontliners</text>
+        <text id="actiontextright" x="508px" y="707px" class="actionname cardblack" text-anchor="end">Government Frontliners</text> 
+        <text  x="430px" y="82px" class="cardblack effecthelptext" text-anchor="end" letter-spacing="5">Hold up to 4 money</text>
+        <text  x="120px" y="742px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">Hold up to 4 infected cards</text>
+        <text id="hqicon" x="500px" y="122px" class="hazardtext cardblack" text-anchor="end">&#xf015;</text>
+        <text id="isolationicon" x="40px" y="742px" class="hazardtext cardblack" text-anchor="start">&#xf7f2;</text>
+
+
+        <script>
+            forceTextWrappingOn(document.getElementById('cardteaser'),280,15);
+        </script>
+    </g>
+</svg>

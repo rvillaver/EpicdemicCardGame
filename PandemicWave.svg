@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540px" height="800px" viewBox="0 0 540 800" version="1.1">
+    <defs>
+        <script type="text/javascript">
+            var svgns = "http://www.w3.org/2000/svg";
+
+            function forceTextWrappingOn(node, width, gap) {
+                var chars = node.firstChild.nodeValue.split(' '),
+                    x = parseInt(node.getAttribute('x'), 10),
+                    y = parseInt(node.getAttribute('y'), 10),
+                    index = 0,
+                    tspan, tspanWidth, textNode
+
+                    node.removeChild(node.firstChild);
+                y = y - gap;
+                for (var c in chars) {
+                    if (chars.hasOwnProperty(c)) {
+                        tspanWidth = tspan == null ? 0 : tspan.getComputedTextLength();
+                        if (tspanWidth > width || tspanWidth === 0) {
+                            y = y + gap;
+                            tspan = document.createElementNS(svgns, 'tspan');
+                            tspan.setAttribute('x', x);
+                            tspan.setAttribute('y', y);
+                            node.appendChild(tspan);
+                            index = 0;
+                        }
+                        
+                        textNode = document.createTextNode(index === 0 ? chars[c] : " " + chars[c]);
+                        tspan.appendChild(textNode);
+                        index++;
+                    }
+                }
+            }
+        </script>
+        <style>@import url(fontawesome/css/all.css);</style>
+        <style>@import url(fonts/fonts.css);</style>
+        <style>@import url(fonts/material-design-iconic-font.min.css);</style>
+        <style>@import url(fonts/all.css);</style>           
+        <clipPath id="cardbox">
+            <rect x="20px" y="20px" height="760px" width="500px" rx="20px" ry="20px"/>
+        </clipPath>
+        <clipPath id="artclip">
+            <rect x="55px" y="155px" height="110px" width="110px" rx="55px" ry="55px"/>
+        </clipPath>        
+        <filter id="dropshadow2" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>     
+        <filter id="dropshadow" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.8"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>            
+        <style>
+            .artclip {
+                -webkit-clip-path: url(#artclip);
+                clip-path: url(#artclip);
+            }        
+            .cardboxclip {
+                -webkit-clip-path: url(#cardbox);
+                clip-path: url(#cardbox);
+            }
+            .cardblackstroke {
+                stroke:#000000;
+            }              
+            .cardgreystroke {
+                stroke:#57595d;
+            }              
+            .cardwhitestroke {
+                stroke:#ffffff;
+            }            
+            .cardbluestroke {
+                stroke:#1B8DC4;
+            }
+            .cardgreenstroke {
+                stroke:#2AB566;
+            }
+            .cardpurplestroke {
+                stroke:#8F469B;
+            }            
+            .cardpinkstroke {
+                stroke:#E82B4B;
+            }            
+            .cardyellowstroke {
+                stroke:#F3BC1C;
+            }   
+            .cardred {
+                fill:#5A1807;
+            }               
+            .cardblack {
+                fill:#000000;
+            }              
+            .cardgrey {
+                fill:#57595d;
+            }              
+            .cardwhite {
+                fill:#ffffff;
+            }            
+            .cardblue {
+                fill:#1B8DC4;
+            }
+            .cardgreen {
+                fill:#2AB566;
+            }
+            .cardpurple {
+                fill:#8F469B;
+            }            
+            .cardpink {
+                fill:#E82B4B;
+            }            
+            .cardyellow {
+                fill:#F3BC1C;
+            }  
+            .cardbrown {
+                fill:#7a5c61;
+            }  
+            .cardcoal {
+                fill: #373F51;
+            }
+            .lab1colorstroke {
+                stroke:#6AB547;
+            }             
+            .lab2colorstroke {
+                stroke:#00B2CA;
+            }             
+            .lab3colorstroke {
+                stroke:#982649;
+            }                
+            .lab1color {
+                fill:#6AB547;
+            }             
+            .lab2color {
+                fill:#00B2CA;
+            }             
+            .lab3color {
+                fill:#982649;
+            }              
+            .logotext {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:40px;
+            }            
+            .logotext2 {
+                font-family:'Varela Round';
+                font-weight: bold;
+                font-size:30px;
+            }  
+            .dropshadow {
+                filter: url(#dropshadow);
+            }  
+            .dropshadow2 {
+                filter: url(#dropshadow2);
+            }                            
+            .resourcetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:110px;
+            }    
+            .powertext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:60px;
+            }              
+            .cardtype {
+                fill:#000000;
+                font-family:'Material-Design-Iconic-Font';
+                font-weight: bold;
+                font-size:120px;
+            } 
+            .projectype {
+                font-family:'Varela Round';
+                font-size:17px;
+            }             
+            .cardname {
+                font-family:'Varela Round';
+                font-size:20px;
+                font-weight: bold;
+            }  
+            .actionname {
+                font-family:'Varela Round';
+                font-size:30px;
+                font-weight: bold;
+            }              
+            .effecttext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                 
+                font-size:15px;
+            }  
+            .effecthelptext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                 
+                font-size:12px;
+            }                                      
+            .cardteaser {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;    
+                font-size:15px;
+            }              
+            .cardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:80px;
+            }     
+            .cardcosttext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:32px;
+            }               
+            .actiontext {
+                font-family:'Font Awesome 5 Free', 'Varela Round';
+                font-weight: 900;                
+                font-size:26px;
+            }               
+            .cardresourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;                
+                font-size:30px;
+            }     
+           .hazardtext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:70px;
+            }            
+           .resourcetext {
+                font-family:'Font Awesome 5 Free';
+                font-weight: 900;
+                font-size:90px;
+            }      
+            .resourcetypetext {
+                font-family:'Varela Round';
+                font-weight: 900;
+                font-size:100px;
+            }                           
+            .cardtextbold {
+                fill:#000000;
+                font-weight: bold;
+            } 
+            .pricetext {
+                font-family:'Varela Round';
+                font-size:120px;
+                font-weight: bold;
+            }                      
+            .rotateside {
+                transform: rotate(90deg);
+                transform-origin: 50% 50%;
+            }              
+        </style>
+    </defs>
+    <rect width="540px" height="800px" x="0px" y="0px" style="stroke:#c0c0c0;fill:#ffffff;" stroke-width="30px"/>
+    <g class="cardboxclip">
+
+        <rect width="470px" height="140px" x="35px" y="100px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text id="projectype" x="130px" y="140px" class="projectype cardblack" text-anchor="start">EMQ</text>
+        <text id="cardname" x="130px" y="160px" class="cardname cardblack" text-anchor="start">Wave 4: Minimum deal 4 card</text>
+        <text id="cardteaser" x="130px" y="178px" class="cardteaser cardblack" text-anchor="start">Players are not allowed to interact with any other city except theirs.</text>
+        <rect x="60px" y="115px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <rect x="60px" y="175px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+
+        <rect width="470px" height="140px" x="35px" y="260px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text id="projectype1" x="130px" y="300px" class="projectype cardblack" text-anchor="start">GMQ</text>
+        <text id="cardname1" x="130px" y="320px" class="cardname cardblack" text-anchor="start">Wave 3: Minimum deal 3 card</text>
+        <text id="cardteaser1" x="130px" y="338px" class="cardteaser cardblack" text-anchor="start">Players are only allowed to interact cities adjacent to them.</text>
+        <rect x="60px" y="275px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <rect x="60px" y="335px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+
+        <rect width="470px" height="140px" x="35px" y="420px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text id="projectype2" x="130px" y="460px" class="projectype cardblack" text-anchor="start">EGMQ</text>
+        <text id="cardname2" x="130px" y="480px" class="cardname cardblack" text-anchor="start">Wave 2: Minimum deal 3 card</text>
+        <text id="cardteaser2" x="130px" y="498px" class="cardteaser cardblack" text-anchor="start">Players are allowed to interact cities adjacent to them. Beyond is an additional &#xf155;.</text>
+        <rect x="60px" y="435px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <rect x="60px" y="495px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+
+        <rect width="470px" height="140px" x="35px" y="580px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
+        <text id="projectype3" x="130px" y="620px" class="projectype cardblack" text-anchor="start">GNN</text>
+        <text id="cardname3" x="130px" y="640px" class="cardname cardblack" text-anchor="start">Wave 1: Minimum deal 1 card</text>
+        <text id="cardteaser3" x="130px" y="658px" class="cardteaser cardblack" text-anchor="start">No restrictions in how players interact with cities.</text>
+        <rect x="60px" y="595px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <rect x="60px" y="655px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+
+        <script>
+            forceTextWrappingOn(document.getElementById('cardteaser'),240,15);
+            forceTextWrappingOn(document.getElementById('cardteaser1'),240,15);
+            forceTextWrappingOn(document.getElementById('cardteaser2'),240,15);
+            forceTextWrappingOn(document.getElementById('cardteaser3'),240,15);
+        </script>
+    </g>
+</svg>

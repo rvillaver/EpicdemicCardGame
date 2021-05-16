@@ -1,0 +1,8 @@
+<button
+    width="350"
+    height="100"
+    fontSize="72"
+    offsetXY="0 -80"
+    onClick="resetDiscard">
+REBUILD
+</button>
