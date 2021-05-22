@@ -284,7 +284,7 @@
 
         <rect width="470px" height="140px" x="35px" y="140px" rx="15px" ry="15px" class="card{{{socialactioncolor}}}stroke" fill-opacity="0" stroke-width="10px" />
         <rect width="50px" height="50px" x="455px" y="135px" rx="15px" ry="15px" class="card{{{socialactioncolor}}}"/>
-        <text id="leftactiondesc" x="270px" y="170px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">{{{leftactiondesc}}}</text>
+        <text id="leftactiondesc" x="270px" y="175px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">{{{leftactiondesc}}}</text>
 
         <rect width="470px" height="200px" x="35px" y="300px" rx="20px" ry="20px" class="{{{labcolor}}}stroke" fill-opacity="0" stroke-width="10px" />
         <text id="cardcosttext" x="270px" y="355px" class="cardcosttext cardblack" text-anchor="middle" letter-spacing="5">{{{cost}}}</text>
@@ -293,7 +293,8 @@
         <rect width="470px" height="140px" x="35px" y="520px" rx="15px" ry="15px" class="card{{{governmentactioncolor}}}stroke" fill-opacity="0" stroke-width="10px" />
         <rect width="50px" height="50px" x="35px" y="610px" rx="15px" ry="15px" class="card{{{governmentactioncolor}}}"/>
 
-        <text id="effecttext" x="175px" y="395px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">{{{effect}}}</text>
+        <text id="titletext" x="175px" y="385px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">{{{title}}}</text>
+        <text id="effecttext" x="175px" y="405px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">{{{effect}}}</text>
        
         <text id="rightactiondesc" x="270px" y="550px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">{{{rightactiondesc}}}</text>
 

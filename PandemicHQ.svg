@@ -271,14 +271,14 @@
         <text  x="50px" y="320px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">Discard a matching icon, to choose any</text>
         <text id="cardcosttext" x="70px" y="345px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardpink">&#xf2c1;</tspan>:Recruit &#xf146;&#xf061;&#xf015;</text>
         <text id="cardcosttext" x="70px" y="375px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardblue">&#xf0c3;</tspan>:Test &#xf146;&#xf061;&#xf256;</text>
-        <text id="cardcosttext" x="70px" y="405px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardpurple">&#xf0f1;</tspan>:Cure &#xf0fe;&#xf061;&#xf4fc;[&#xf0f1;]/&#xf4fc;&#xf48e;</text>
+        <text id="cardcosttext" x="70px" y="405px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardpurple">&#xf0f1;</tspan>:Cure &#xf0fe;&#xf0d6;&#xf061;&#xf4fc;</text>
         <text id="cardcosttext" x="70px" y="435px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardyellow">&#xf51e;</tspan>:Fund &#xf256;&#xf061;&#xf015;</text>
         <text id="cardcosttext" x="70px" y="465px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardbrown">&#xf023;</tspan>:Quarantine &#xf0fe;&#xf061;&#xf7f2;</text>
-        <text id="cardcosttext" x="70px" y="495px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardcoal">&#xf807;</tspan>:Build/Operate &#xf256;&#xf015;&#xf061;&#xf7f2;</text>
+        <text id="cardcosttext" x="70px" y="495px" class="actiontext cardblack" text-anchor="start" letter-spacing="5"><tspan class="cardcoal">&#xf807;</tspan>:Build &#xf256;&#xf015;&#xf061;&#xf7f2;</text>
         
         <rect width="460px" height="141px" x="40px" y="520px" rx="15px" ry="15px" style="stroke:#f0f0f0;fill:#ffffff;" />
         <text  x="50px" y="515px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">1. Active Player Actions (soc, gov)</text>
-        <text  x="50px" y="535px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">3. Add cards to your city for every &#xe074;</text>
+        <text  x="50px" y="535px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">2. Add cards to your city for every &#xe074;</text>
         <text  x="82px" y="550px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">icon in the city minimum of wave</text>
         <text  x="50px" y="565px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">When mutation is drawn, deal another</text>
         <text  x="50px" y="580px" class="cardblack effecthelptext" text-anchor="start" letter-spacing="5">card to that city if it has space for it</text>

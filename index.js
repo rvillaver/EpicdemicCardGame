@@ -59,14 +59,14 @@ var types = {
     '[Cure]': '<tspan class="cardpurple">&#xf0f1;</tspan>',
     '[Fund]': '<tspan class="cardyellow">&#xf51e;</tspan>',
     '[Quarantine]': '<tspan class="cardbrown">&#xf023;</tspan>',
-    '[Operate]': '<tspan class="cardcoal">&#xf807;</tspan>',
+    '[Build]': '<tspan class="cardcoal">&#xf807;</tspan>',
     '[virus]': '<tspan class="cardred">&#xe074;</tspan>',
     '[inline-Recruit]': '&#xf2c1;',
     '[inline-Test]': '&#xf0c3;',
     '[inline-Cure]': '&#xf0f1;',
     '[inline-Fund]': '&#xf51e;',
     '[inline-Quarantine]': '&#xf023;',
-    '[inline-Operate]': '&#xf807;',
+    '[inline-Build]': '&#xf807;',
     '[inline-virus]': '&#xe074;',
     '[inline-money]': '&#xf0d6;',
     '[inline-vaccine]': '&#xf48e;',
@@ -74,6 +74,7 @@ var types = {
     '[inline-negative]': '&#xf146;',
     '[inline-hand]': '&#xf256;',
     '[inline-hq]': '&#xf015;',    
+    '[inline-cured]': '&#xf4fc;',
     '[inline-medical]': '&#xf7f2;',
     '[double-mutation]': '<tspan class="cardred">&#xe074;&#xe074;</tspan>',
     '[cost-mutation]': '<tspan class="cardred">&#xf155;&#xe074;</tspan>',
@@ -83,12 +84,12 @@ var types = {
 };
 
 var descriptions = {
-    '[Recruit]': 'Take an non-infected card [inline-negative] in front of a city and put in your HQ [inline-hq] as a social (left) or government (right) frontliner',
-    '[Test]': 'Take a non-infected card [inline-negative] in front of a city and put into your hand [inline-hand]',
-    '[Cure]': 'Remove another cure [inline-Cure] card from your hand [inline-hand] or discard a vaccine card [inline-vaccine] from a lab [inline-medical] to move an infected card [inline-positive] in front of a city or from your buildings [inline-medical] to the cured zone',
-    '[Fund]': 'Place a card from your hand [inline-hand] face down in front of your HQ [inline-hq] as money [inline-money]',
-    '[Quarantine]': 'Move an infected card [inline-positive] in front of a city to your medical facility [inline-medical]',
-    '[Operate]': 'Put beside your city a building [inline-medical] from your hand [inline-hand] by discarding the money [inline-money] from your HQ [inline-hq] and card(s) with matching icons to your hand or perform &nbsp;&nbsp;&nbsp; an operate action [inline-Operate] of a building in your city.',
+    '[Recruit]': 'Recruit: Take a non-infected card [inline-negative] in front of a city or from the [inline-cured] cured zone and put them in your HQ [inline-hq] &nbsp;&nbsp;&nbsp; as a social (left) or government (right) frontliner.',
+    '[Test]': 'Test: Take a non-infected &nbsp;&nbsp;&nbsp; card [inline-negative] in front of a city and put it into your hand [inline-hand].',
+    '[Cure]': 'Cure: Discard [inline-money] card from your HQ [inline-hq] to move an infected card [inline-positive] in front of a city or from one of your facilities [inline-medical] to the [inline-cured] cured zone.',
+    '[Fund]': 'Fund: Place a card from your hand [inline-hand] face down in front of your HQ [inline-hq] as money [inline-money].',
+    '[Quarantine]': 'Quarantine: Move an infected card [inline-positive] in front of a city to your medical facility [inline-medical].',
+    '[Build]': 'Build: Put beside your city a facility [inline-medical] from your hand [inline-hand] by discarding the money [inline-money] from your HQ [inline-hq] and card(s) &nbsp;&nbsp;&nbsp;&nbsp;  with matching icons from your hand as required.',
 };
 
 var supportActions = {
@@ -97,7 +98,7 @@ var supportActions = {
     '[Cure]': '[inline-Cure]',
     '[Fund]': '[inline-Fund]',
     '[Quarantine]': '[inline-Quarantine]',
-    '[Operate]': '[inline-Operate]',
+    '[Build]': '[inline-Build]',
     '[virus]': '[inline-virus]'
 };
 
@@ -107,11 +108,11 @@ var color = {
     '[Cure]': 'purple',
     '[Fund]': 'yellow',
     '[Quarantine]': 'brown',
-    '[Operate]': 'coal'
+    '[Build]': 'coal'
 };
 
 var socials = ['[Recruit]','[Test]','[Cure]'];
-var governance = ['[Fund]','[Quarantine]','[Operate]'];
+var governance = ['[Fund]','[Quarantine]','[Build]'];
 
 var master = [
     {
@@ -120,7 +121,7 @@ var master = [
         city: 'Metro Manila',
         description: 'A viral test tells you if you have a current infection. Two types of viral tests can be used: nucleic acid amplification tests (NAATs) and antigen tests.',
         cost: '[money]',
-        effect: '&#xf807;: Look top 1+X cards of the draw deck, you may put a card at the bottom of the deck &nbsp;&nbsp;&nbsp; (X=&#xf0c3;&nbsp;in&nbsp;&#xf015;).',
+        effect: 'Once per turn when you deal a card to a city, you may choose to discard it and draw another card to replace.',
         labcolor: 'lab1color',
         capacity: '&#xf0fe;&#xf0fe;&#xf0fe;',
         capacitytext: 'Hold up to 3 &#xf0fe;',
@@ -139,7 +140,7 @@ var master = [
         city: 'Metro Manila',
         description: 'Isolation separates sick people with a contagious disease from people who are not sick. Quarantine separates and restricts the movement of people who were exposed to a contagious disease to see if they become sick.',
         cost: '[money][money]',
-        effect: 'Hold up to 5 &#xf0fe;. Cards in quarantine are &nbsp;&nbsp;&nbsp; considered not in the city.',
+        effect: 'Hold up to 5 &#xf0fe; cards. Cards in quarantine are considered not in the city.',
         labcolor: 'lab2color',
         capacity: '&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;',
         capacitytext: '',
@@ -158,7 +159,7 @@ var master = [
         city: 'Metro Manila',
         description: 'COVID-19 vaccines are safe and effective. After you’ve been fully vaccinated, you can start to do some things that you had to stop doing because of the pandemic.',
         cost: '[money][money][money]',
-        effect: '&#xf807;: Discard a &#xf0d6; or &#xf48e; to cure &#xf0fe;. Whenever you &#xf51e;, you may attach &#xf0d6; to this &#xf7f2; as &#xf48e;.',
+        effect: 'You may take the &#xf0f1; Cure action without discarding money &#xf0d6;.',
         labcolor: 'lab3color',
         capacity: '&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;',
         capacitytext: 'Hold up to 4 &#xf0fe;',
@@ -505,11 +506,14 @@ function ppin(v){
 function generatePDF(){
 
     var cards = [];
-    for(var i=0;i<207;i++){
+    for(var i=0;i<90;i++){
         cards.push('card'+i+'.jpg');
     }
-    for(var i=0;i<6;i++){
-        cards.push('PandemicHQ.jpg');
+    for(var i=0;i<5;i++){
+        cards.push('PandemicHQLarge.jpg');
+    }
+    for(var i=0;i<1;i++){
+        cards.push('PandemicWave.jpg');
     }
 
     let pdf = new pdfkit({
@@ -579,7 +583,7 @@ function generatePDF(){
 
 }
 
-//generateCards();
-generateTTSPages();
+generateCards();
+//generateTTSPages();
 //generateHelperCards();
 //generatePDF();

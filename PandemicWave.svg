@@ -266,28 +266,28 @@
         <text id="projectype" x="130px" y="140px" class="projectype cardblack" text-anchor="start">EMQ</text>
         <text id="cardname" x="130px" y="160px" class="cardname cardblack" text-anchor="start">Wave 4: Minimum deal 4 card</text>
         <text id="cardteaser" x="130px" y="178px" class="cardteaser cardblack" text-anchor="start">Players are not allowed to interact with any other city except theirs.</text>
-        <rect x="60px" y="115px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <!-- <rect x="60px" y="115px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" /> -->
         <rect x="60px" y="175px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
 
         <rect width="470px" height="140px" x="35px" y="260px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
         <text id="projectype1" x="130px" y="300px" class="projectype cardblack" text-anchor="start">GMQ</text>
         <text id="cardname1" x="130px" y="320px" class="cardname cardblack" text-anchor="start">Wave 3: Minimum deal 3 card</text>
-        <text id="cardteaser1" x="130px" y="338px" class="cardteaser cardblack" text-anchor="start">Players are only allowed to interact cities adjacent to them.</text>
-        <rect x="60px" y="275px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <text id="cardteaser1" x="130px" y="338px" class="cardteaser cardblack" text-anchor="start">Players are only allowed to interact with their city and cities adjacent to them.</text>
+        <!-- <rect x="60px" y="275px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" /> -->
         <rect x="60px" y="335px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
 
         <rect width="470px" height="140px" x="35px" y="420px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
         <text id="projectype2" x="130px" y="460px" class="projectype cardblack" text-anchor="start">EGMQ</text>
-        <text id="cardname2" x="130px" y="480px" class="cardname cardblack" text-anchor="start">Wave 2: Minimum deal 3 card</text>
-        <text id="cardteaser2" x="130px" y="498px" class="cardteaser cardblack" text-anchor="start">Players are allowed to interact cities adjacent to them. Beyond is an additional &#xf155;.</text>
-        <rect x="60px" y="435px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <text id="cardname2" x="130px" y="480px" class="cardname cardblack" text-anchor="start">Wave 2: Minimum deal 2 card</text>
+        <text id="cardteaser2" x="130px" y="498px" class="cardteaser cardblack" text-anchor="start">Players are allowed to interact for free with their city and cities adjacent to them. Beyond is an additional &#xf155;.</text>
+        <!-- <rect x="60px" y="435px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" /> -->
         <rect x="60px" y="495px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
 
         <rect width="470px" height="140px" x="35px" y="580px" rx="15px" ry="15px" class="cardgreystroke" fill-opacity="0" stroke-width="10px" />
         <text id="projectype3" x="130px" y="620px" class="projectype cardblack" text-anchor="start">GNN</text>
         <text id="cardname3" x="130px" y="640px" class="cardname cardblack" text-anchor="start">Wave 1: Minimum deal 1 card</text>
-        <text id="cardteaser3" x="130px" y="658px" class="cardteaser cardblack" text-anchor="start">No restrictions in how players interact with cities.</text>
-        <rect x="60px" y="595px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
+        <text id="cardteaser3" x="130px" y="658px" class="cardteaser cardblack" text-anchor="start">No restrictions in how players interact with any city.</text>
+        <!-- <rect x="60px" y="595px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" /> -->
         <rect x="60px" y="655px" width="50px" height="50px" rx="25px" ry="25px" class="cardgreystroke" fill-opacity="0" stroke-width="5px" />
 
         <script>
