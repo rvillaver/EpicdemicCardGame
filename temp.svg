@@ -282,24 +282,24 @@
     <rect width="540px" height="800px" x="0px" y="0px" style="stroke:#c0c0c0;fill:#ffffff;" stroke-width="30px"/>
     <g class="cardboxclip">
 
-        <rect width="470px" height="140px" x="35px" y="140px" rx="15px" ry="15px" class="cardpinkstroke" fill-opacity="0" stroke-width="10px" />
-        <rect width="50px" height="50px" x="455px" y="135px" rx="15px" ry="15px" class="cardpink"/>
-        <text id="leftactiondesc" x="270px" y="175px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">Recruit: Take a non-infected card &#xf146; in front of a city or from the &#xf4fc; cured zone and put them in your HQ &#xf015; &nbsp;&nbsp;&nbsp; as a social (left) or government (right) frontliner.</text>
+        <rect width="470px" height="140px" x="35px" y="140px" rx="15px" ry="15px" class="cardbluestroke" fill-opacity="0" stroke-width="10px" />
+        <rect width="50px" height="50px" x="455px" y="135px" rx="15px" ry="15px" class="cardblue"/>
+        <text id="leftactiondesc" x="270px" y="175px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">Test: Take a non-infected &nbsp;&nbsp;&nbsp; card &#xf146; in front of a city and put it into your hand &#xf256;.</text>
 
-        <rect width="470px" height="200px" x="35px" y="300px" rx="20px" ry="20px" class="lab2colorstroke" fill-opacity="0" stroke-width="10px" />
-        <text id="cardcosttext" x="270px" y="355px" class="cardcosttext cardblack" text-anchor="middle" letter-spacing="5"><tspan class="cardgreen">&#xf0d6;</tspan><tspan class="cardgreen">&#xf0d6;</tspan><tspan class="cardpink">&#xf2c1;</tspan><tspan class="cardyellow">&#xf51e;</tspan></text>
-        <text id="cardtext" x="115px" y="442px" class="cardtext lab2color" text-anchor="middle" letter-spacing="5">&#xf7f2;</text>
-        <text id="cardtext" x="115px" y="472px" class="cardcapacitytext lab2color" text-anchor="middle" letter-spacing="5">&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;</text>
+        <rect width="470px" height="200px" x="35px" y="300px" rx="20px" ry="20px" class="lab3colorstroke" fill-opacity="0" stroke-width="10px" />
+        <text id="cardcosttext" x="270px" y="355px" class="cardcosttext cardblack" text-anchor="middle" letter-spacing="5"><tspan class="cardgreen">&#xf0d6;</tspan><tspan class="cardgreen">&#xf0d6;</tspan><tspan class="cardgreen">&#xf0d6;</tspan><tspan class="cardblue">&#xf0c3;</tspan><tspan class="cardyellow">&#xf51e;</tspan></text>
+        <text id="cardtext" x="115px" y="442px" class="cardtext lab3color" text-anchor="middle" letter-spacing="5">&#xf7f2;</text>
+        <text id="cardtext" x="115px" y="472px" class="cardcapacitytext lab3color" text-anchor="middle" letter-spacing="5">&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;</text>
         <rect width="470px" height="140px" x="35px" y="520px" rx="15px" ry="15px" class="cardyellowstroke" fill-opacity="0" stroke-width="10px" />
         <rect width="50px" height="50px" x="35px" y="610px" rx="15px" ry="15px" class="cardyellow"/>
 
-        <text id="titletext" x="175px" y="385px" class="cardblack effecttext" text-anchor="start" letter-spacing="5"><tspan class="lab2color">QUARANTINE FACILITY</tspan></text>
-        <text id="effecttext" x="175px" y="405px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">Hold up to 5 &#xf0fe; cards. Cards in quarantine are considered not in the city.</text>
+        <text id="titletext" x="175px" y="385px" class="cardblack effecttext" text-anchor="start" letter-spacing="5"><tspan class="lab3color">VACCINE LABORATORY</tspan></text>
+        <text id="effecttext" x="175px" y="405px" class="cardblack effecttext" text-anchor="start" letter-spacing="5">You may take the &#xf0f1; Cure action without discarding money &#xf0d6;. You may also use the cure action on &#xf146; cards in cities.</text>
        
         <text id="rightactiondesc" x="270px" y="550px" class="cardblack actiondescriptiontext" text-anchor="middle" letter-spacing="5">Fund: Place a card from your hand &#xf256; face down in front of your HQ &#xf015; as money &#xf0d6;.</text>
 
-        <text id="actiontextleft" x="40px" y="112px" class="resourcetext cardblack" text-anchor="start"><tspan class="cardpink">&#xf2c1;</tspan></text>
-        <text id="actiontextleft2" x="480px" y="174px" class="smallresourcetext cardwhite" text-anchor="middle">&#xf2c1;</text>
+        <text id="actiontextleft" x="40px" y="112px" class="resourcetext cardblack" text-anchor="start"><tspan class="cardblue">&#xf0c3;</tspan></text>
+        <text id="actiontextleft2" x="480px" y="174px" class="smallresourcetext cardwhite" text-anchor="middle">&#xf0c3;</text>
         <text id="actiontextright" x="500px" y="758px" class="resourcetext cardblack" text-anchor="end"><tspan class="cardyellow">&#xf51e;</tspan></text>       
         <text id="actiontextright2" x="60px" y="650px" class="smallresourcetext cardwhite" text-anchor="middle">&#xf51e;</text>       
         <text id="infectedicon" x="500px" y="112px" class="hazardtext cardblack" text-anchor="end"></text>

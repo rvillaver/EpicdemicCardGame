@@ -159,7 +159,7 @@ var master = [
         city: 'Metro Manila',
         description: 'COVID-19 vaccines are safe and effective. After you’ve been fully vaccinated, you can start to do some things that you had to stop doing because of the pandemic.',
         cost: '[money][money][money]',
-        effect: 'You may take the &#xf0f1; Cure action without discarding money &#xf0d6;.',
+        effect: 'You may take the &#xf0f1; Cure action without discarding money &#xf0d6;. You may also use the cure action on [inline-negative] cards in cities.',
         labcolor: 'lab3color',
         capacity: '&#xf0fe;&#xf0fe;&#xf0fe;&#xf0fe;',
         capacitytext: 'Hold up to 4 &#xf0fe;',
@@ -583,7 +583,7 @@ function generatePDF(){
 
 }
 
-generateCards();
-//generateTTSPages();
+//generateCards();
+generateTTSPages();
 //generateHelperCards();
 //generatePDF();
